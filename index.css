@@ -5,11 +5,12 @@
 .container {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .header {
     display: block;
-    position: relative;
+    position: absolute;
     left: 80px;
     top: 26px;
     width: 180px;
@@ -74,6 +75,8 @@
 
 @media screen and (max-width:1000px) {
     .timelineWrapper {
+        position: absolute;
+        top: 100px;
         width: 90%;
         height: 700px;
         transform: scale(1.0);
@@ -82,4 +85,9 @@
         overflow-y: auto;
     }
 
+    .header {
+        width: 120px;
+        height: 28px;
+        left: 20px;
+    }
 }
