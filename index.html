@@ -58,7 +58,9 @@
             render() {
                 return (
                     <div className='container'>
-                        <a className='header' href='https://www.linkkey.io/' target='blank'></a>
+                        <div class="header">
+                            <a href='https://www.linkkey.io/' target='blank'></a>
+                        </div>
                         <div className='home'>
                             <antd.Timeline mode={this.state.mode} className='timelineWrapper' pending='Please look forward to it!' pendingDot={<div className="spinIcon"></div>}>
                                 <antd.Timeline.Item color='green'>
