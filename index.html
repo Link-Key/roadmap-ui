@@ -58,7 +58,9 @@
     render() {
       return (
         <div className='container'>
-          <a className='header' href='https://www.linkkey.io/' target='blank'></a>
+          <a href='https://www.linkkey.io/' target='blank'>
+            <img className="logoImg" src="./assets/logo.png" alt=""/>
+          </a>
           <div className='home'>
             <antd.Timeline mode={this.state.mode} className='timelineWrapper' pending='Please look forward to it!'
                            pendingDot={<div className="spinIcon"></div>}>
@@ -69,12 +71,12 @@
                 2021.11
                 <a href="https://www.linkkey.io/whitepaper">《Linkkey white paper》</a>
                 release,
-                <a href="https://opensea.io/collection/linkkey">fundraising INO</a>
+                <a href="https://opensea.io/collection/linkkey"> fundraising INO</a>
                 shelves Opensea, SNS personal domain name service enters R&D phase.
               </antd.Timeline.Item>
               <antd.Timeline.Item color='green'>
                 2021.12 SNS personal domain name service online, release
-                <a href="https://github.com/Link-Key/sns-app/releases/tag/sns_v1.0.0">version 1.0</a>.
+                <a href="https://github.com/Link-Key/sns-app/releases/tag/sns_v1.0.0"> version 1.0</a>.
               </antd.Timeline.Item>
               <antd.Timeline.Item color="green">
                 2022.01 SNS version updated to v1.2.x, SNS contract upgraded to
