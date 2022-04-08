@@ -18,90 +18,109 @@
 </head>
 
 <body>
-    <div id="root"></div>
+<div id="root"></div>
 
-    <script type="text/babel">
+<script type="text/babel">
 
-        class RoadMap extends React.Component {
-            constructor(props) {
-                super(props);
-                let screenWidth = document.body.offsetWidth
-                if (screenWidth < 600) {
-                    this.state = { mode: 'left' };
-                } else {
-                    this.state = { mode: 'alternate' };
-                }
-            }
+  class RoadMap extends React.Component {
+    constructor(props) {
+      super(props);
+      let screenWidth = document.body.offsetWidth
+      if (screenWidth < 600) {
+        this.state = {mode: 'left'};
+      } else {
+        this.state = {mode: 'alternate'};
+      }
+    }
 
-            // 监听浏览器窗口变化
-            componentDidMount() {
-                // 在window对象中添加监听事件
-                window.addEventListener('resize', this.resizeWindow)
-            }
+    // 监听浏览器窗口变化
+    componentDidMount() {
+      // 在window对象中添加监听事件
+      window.addEventListener('resize', this.resizeWindow)
+    }
 
-            // 移除监听窗口变化的事件
-            componentWillUnmount() {
-                window.removeEventListener('resize', this.resizeWindow)
-            }
+    // 移除监听窗口变化的事件
+    componentWillUnmount() {
+      window.removeEventListener('resize', this.resizeWindow)
+    }
 
-            // 窗口变化执行的方法
-            resizeWindow = () => {
-                let screenWidth = document.body.offsetWidth
-                if (screenWidth < 600) {
-                    this.setState({ mode: 'left' })
-                } else {
-                    this.setState({ mode: 'alternate' })
-                }
-            }
+    // 窗口变化执行的方法
+    resizeWindow = () => {
+      let screenWidth = document.body.offsetWidth
+      if (screenWidth < 600) {
+        this.setState({mode: 'left'})
+      } else {
+        this.setState({mode: 'alternate'})
+      }
+    }
 
-            render() {
-                return (
-                    <div className='container'>
-                        <a className='header' href='https://www.linkkey.io/' target='blank'></a>
-                        <div className='home'>
-                            <antd.Timeline mode={this.state.mode} className='timelineWrapper' pending='Please look forward to it!' pendingDot={<div className="spinIcon"></div>}>
-                                <antd.Timeline.Item color='green'>
-                                    2021.09 Establishment of the founding team of Linkkey.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color="green">
-                                    2021.11 《Linkkey white paper》 release, fundraising INO shelves Opensea, SNS personal domain name service enters R&D phase.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='green'>
-                                    2021.12 SNS personal domain name service online, release version 1.0.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color="green">
-                                    2022.01 SNS version updated to v1.2.x, SNS contract upgraded to 2.0, bug fixes and security upgrades.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='green'>
-                                    2022.03 SNS releases v1.3.x, opens KEY token airdrop, opens multi-currency payment for personal domain registration.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='#ea6060'>
-                                    2022.04 Complete prototyping and technical selection of social chat service (Linkkey IM), SNS access to KAVA (Cosmos ecology).
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='#ea6060'>
-                                    2022.05&06 Linkkey IM for R&D phase, build on-chain services based on Polygon, SNS access to Metis (ETH Layer2 zkRollup), DEX build LP pool of KEY, open DAO community governance.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='#ea6060'>
-                                    2022Q3 Linkkey IM (alpha version) released to open the internal test & public test of a high-value social chat service for a small circle of consensus.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='#ea6060'>
-                                    2022Q4 Linkkey IM (stable version) released, fully open service to the public, continuous iterative optimization.
-                                </antd.Timeline.Item>
-                                <antd.Timeline.Item color='#ea6060'>
-                                    2023Q1 Provide common API for social services and access to third-party chat applications.
-                                </antd.Timeline.Item>
-                            </antd.Timeline>
-                        </div>
-                    </div>
-                )
-            }
-        }
+    render() {
+      return (
+        <div className='container'>
+          <a className='header' href='https://www.linkkey.io/' target='blank'></a>
+          <div className='home'>
+            <antd.Timeline mode={this.state.mode} className='timelineWrapper' pending='Please look forward to it!'
+                           pendingDot={<div className="spinIcon"></div>}>
+              <antd.Timeline.Item color='green'>
+                2021.09 Establishment of the founding team of Linkkey.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color="green">
+                2021.11
+                <a href="https://www.linkkey.io/whitepaper">《Linkkey white paper》</a>
+                release,
+                <a href="https://opensea.io/collection/linkkey">fundraising INO</a>
+                shelves Opensea, SNS personal domain name service enters R&D phase.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='green'>
+                2021.12 SNS personal domain name service online, release
+                <a href="https://github.com/Link-Key/sns-app/releases/tag/sns_v1.0.0">version 1.0</a>.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color="green">
+                2022.01 SNS version updated to v1.2.x, SNS contract upgraded to
+                <a href="https://github.com/Link-Key/sns-contract-v2"> v2.0</a>
+                , bug fixes and security upgrades.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='green'>
+                2022.03 SNS releases v1.3.x, open KEY token
+                <a href="https://mirror.xyz/0x2e4e14FA1fe656679fBfcdfa9F08afcebd248e9e/c8CF3b-zlQ0AgpmuH6VjUO0UOUafMfVIMrq0R0UyREc"> airdrop</a>
+                , open
+                <a href="https://mirror.xyz/0x2e4e14FA1fe656679fBfcdfa9F08afcebd248e9e/i812dwB8HxQtVHUoU8iJyHcAVACmcYfwrgCTF61q9ds"> multi-currency payment </a>
+                 for personal domain
+                registration.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='#ea6060'>
+                2022.04 Complete prototyping and technical selection of social chat service (Linkkey IM), SNS access to
+                <a href="https://twitter.com/kava_platform/status/1505966758276042755"> KAVA (Cosmos ecology) </a> and Tron Network, released
+                <a href="https://trx.sns.chat"> tron version of sns</a>. KEY to be listed on well-known exchanges.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='#ea6060'>
+                2022.05&06 Linkkey IM for R&D phase, build on-chain services based on Polygon, SNS access to Metis (ETH
+                Layer2 zkRollup), DEX build LP pool of KEY, open
+                <a href="https://client.aragon.org/#/linkkey.aragonid.eth"> DAO community governance.</a>
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='#ea6060'>
+                2022Q3 Linkkey IM (alpha version) released to open the internal test & public test of a high-value
+                social chat service for a small circle of consensus.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='#ea6060'>
+                2022Q4 Linkkey IM (stable version) released, fully open service to the public, continuous iterative
+                optimization.
+              </antd.Timeline.Item>
+              <antd.Timeline.Item color='#ea6060'>
+                2023Q1 Provide common API for social services and access to third-party chat applications.
+              </antd.Timeline.Item>
+            </antd.Timeline>
+          </div>
+        </div>
+      )
+    }
+  }
 
-        ReactDOM.render(
-            <RoadMap />,
-            document.getElementById('root')
-        );
-    </script>
+  ReactDOM.render(
+    <RoadMap/>,
+    document.getElementById('root')
+  );
+</script>
 </body>
 
 </html>
