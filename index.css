@@ -1,92 +1,89 @@
 #root {
-    height: 100%;
+  height: 100%;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 a {
-    color: #ea6060;
+  color: #ea6060;
 }
 
 .logoImg {
-    display: block;
-    margin: 20px;
-    width: 155px;
-    height: 36px;
+  display: block;
+  margin: 20px;
+  width: 155px;
 }
 
 .home {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    min-height: 800px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+  justify-content: center;
+  align-items: center;
 }
 
 .home .ant-timeline-item-content {
-    color: white;
+  color: black;
 }
 
-
 .timelineWrapper {
-    width: 65%;
-    max-height: 800px;
-    transform: scale(1.2);
-    padding: 20px;
-    align-self: center;
+  width: 65%;
+  max-height: 800px;
+  transform: scale(1.2);
+  padding: 20px;
+  align-self: center;
 }
 
 .timelineWrapper .spinIcon {
-    height: 15px;
-    width: 15px;
-    color: pink;
-    border-radius: 50%;
-    border: solid transparent 2px;
-    border-top: solid #ea6060 2px;
-    border-left: solid #ea6060 2px;
-    animation: loader 1s linear infinite;
+  height: 15px;
+  width: 15px;
+  color: pink;
+  border-radius: 50%;
+  border: solid transparent 2px;
+  border-top: solid #ea6060 2px;
+  border-left: solid #ea6060 2px;
+  animation: loader 1s linear infinite;
 }
 
 @keyframes loader {
-    0% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 ::-webkit-scrollbar {
-    width: 3px;
-    background-color: #000000;
-    border-radius: 5px;
+  width: 3px;
+  background-color: #000000;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #555;
+  border-radius: 10px;
+  background-color: #555;
 }
 
 @media screen and (max-width: 1000px) {
-    .timelineWrapper {
-        position: absolute;
-        top: 100px;
-        width: 90%;
-        height: 700px;
-        transform: scale(1.0);
-        padding: 20px;
-        align-self: center;
-    }
+  .timelineWrapper {
+    position: absolute;
+    top: 100px;
+    width: 90%;
+    height: 700px;
+    transform: scale(1);
+    padding: 20px;
+    align-self: center;
+  }
 
-    .logoImg {
-        display: block;
-        margin: 20px;
-        width: 120px;
-        height: 28px;
-    }
+  .logoImg {
+    display: block;
+    margin: 20px;
+    width: 120px;
+  }
 }
