@@ -38,5 +38,5 @@ jobs:
           REMOTE_HOST: '107.148.33.51'
           REMOTE_USER:  root
           REMOTE_PORT: '53445'
-          TARGET: '/www/wwwroot/roadmap.linkkey.tech'
+          TARGET: '/www/wwwroot/roadmap.linkkey.io'
           EXCLUDE: ''
